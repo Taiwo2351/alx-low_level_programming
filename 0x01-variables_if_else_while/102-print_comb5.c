@@ -18,7 +18,7 @@ int main(void)
 	int i, j;
 	int a, b, c, d;
 
-	for (i = 0; i <= 99; i++)
+	for (i = 0; i <= 98; i++)
 	{
 		a = i / 10; /* doubles fnum */
 		b = i % 10; /* singles fnum */
