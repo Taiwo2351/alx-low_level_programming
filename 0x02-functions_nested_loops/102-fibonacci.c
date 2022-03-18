@@ -8,29 +8,17 @@
 int main(void)
 {
 int i;
-int n = 50;
-/*declare first and second terms and next-term*/
-long int t1, t2, next_term;
-/*initialize the first, second and  next term (3rd term)*/
-t1 = 1;
-t2 = 2;
-next_term = t1 + t2;
-/*print the first two terms t1 and t2*/
-printf("%lu, %lu, ", t1, t2);
-/*print 3rd to 50th terms*/
-for (i = 3; i <= n; i++)
+long int fibonacci[50];
+fibonacci[0] = 1;
+fibonacci[1] = 2;
+printf("%ld, %ld, ", fibonacci[0], fibonacci[1]);
+for (i = 2; i < 50; i++)
 {
-if (i < 50)
-{
-printf("%lu, ", next_term);
-t1 = t2;
-t2 = next_term;
-next_term = t1 + t2;
-}
+fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+if (i == 49)
+printf("%ld\n", fibonacci[i]);
 else
-{
-printf("%lu\n", next_term);
+printf("%ld, ", fibonacci[i]);
 }
 return (0);
-}
 }
