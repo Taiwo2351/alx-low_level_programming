@@ -7,7 +7,7 @@
 */
 int main(void)
 {
-int i, n;
+int i;
 /* initialize first and second terms*/
 int t1 = 1, t2 = 2, n = 50;
 /*initialize the next term (3rd term)*/
@@ -17,10 +17,10 @@ printf("%d, %d, ", t1, t2);
 /*print 3rd to 50th terms*/
 for (i = 3; i <= n; ++i)
 {
-printf("%d, ", nextTerm);
+printf("%d, ", next_term);
 t1 = t2;
-t2 = nextTerm;
-nextTerm = t1 + t2;
+t2 = next_term;
+next_term = t1 + t2;
 }
 putchar ('\n');
 return (0);
