@@ -8,16 +8,19 @@
 int main(void)
 {
 int i;
-/* initialize first and second terms*/
-int t1 = 1, t2 = 2, n = 50;
-/*initialize the next term (3rd term)*/
-int next_term = t1 + t2;
+int n = 50;
+/*declare first and second terms and next-term*/
+long int t1, t2, next_term;
+/*initialize the first, second and  next term (3rd term)*/
+t1 = 1;
+t2 = 2;
+next_term = t1 + t2;
 /*print the first two terms t1 and t2*/
-printf("%d, %d, ", t1, t2);
+printf("%lu, %lu, ", t1, t2);
 /*print 3rd to 50th terms*/
 for (i = 3; i <= n; i++)
 {
-printf("%d, ", next_term);
+printf("%lu, ", next_term);
 t1 = t2;
 t2 = next_term;
 next_term = t1 + t2;
