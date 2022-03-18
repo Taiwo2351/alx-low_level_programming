@@ -15,7 +15,7 @@ int next_term = t1 + t2;
 /*print the first two terms t1 and t2*/
 printf("%d, %d, ", t1, t2);
 /*print 3rd to 50th terms*/
-for (i = 3; i <= n; ++i)
+for (i = 3; i <= n; i++)
 {
 printf("%d, ", next_term);
 t1 = t2;
