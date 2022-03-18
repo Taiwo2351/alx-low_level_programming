@@ -20,11 +20,17 @@ printf("%lu, %lu, ", t1, t2);
 /*print 3rd to 50th terms*/
 for (i = 3; i <= n; i++)
 {
+if (i < 50)
+{
 printf("%lu, ", next_term);
 t1 = t2;
 t2 = next_term;
 next_term = t1 + t2;
 }
-putchar ('\n');
+else
+{
+printf("%lu\n", next_term);
+}
 return (0);
+}
 }
