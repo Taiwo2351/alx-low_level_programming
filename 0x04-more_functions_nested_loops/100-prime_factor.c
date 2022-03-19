@@ -1,16 +1,29 @@
 #include <stdio.h>
+#include <math.h>
+#include "main.h"
 /**
 * main - Entry point
 * Return: Always 0
 */
 int main(void)
 {
-	unsigned long int i = 3, n = 612852475143;
-	for (; i < 12057; i += 2)
+	long int max, lower, test;
+
+	max = 612852475143;
+	lower = 2;
+	test = 2;
+
+	while (max > test)
 	{
-		while (n % i == 0 && n != i)
-			n /= i;
+		if (max % test == 0)
+		{
+			lower = test;
+			max = max / lower;
+			test = lower + 1;
+		}
+		else
+			test++;
 	}
-	printf("%lu\n", n);
+	printf("%ld\n", max);
 	return (0);
 }
