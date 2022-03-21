@@ -1,0 +1,1 @@
+Using pointer and Array
